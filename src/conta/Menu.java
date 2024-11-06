@@ -1,16 +1,27 @@
 package conta;
 
 import java.util.Scanner;
+import conta.model.Conta;
+import conta.util.Cores;
 
 public class Menu {
 	public static void main(String[] args) {
+
+		// Teste da Classe conta
+		Conta c1 = new Conta(1, 123, 1, "Adriane", 1950.0f);
+		c1.visualizar();
+		c1.sacar(1200.0f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
 
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
 
 		while (true) {
-
+			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_GREEN_BACKGROUND
+					+ "*******************************************************");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BRAZIL COM Z                ");
@@ -42,39 +53,39 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println("Criar Conta\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Criar Conta\n\n");
 
 				break;
 			case 2:
-				System.out.println("Listar todas as Contas\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Listar todas as Contas\n\n");
 
 				break;
 			case 3:
-				System.out.println("Consultar dados da Conta - por número\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Consultar dados da Conta - por número\n\n");
 
 				break;
 			case 4:
-				System.out.println("Atualizar dados da Conta\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Atualizar dados da Conta\n\n");
 
 				break;
 			case 5:
-				System.out.println("Apagar a Conta\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Apagar a Conta\n\n");
 
 				break;
 			case 6:
-				System.out.println("Saque\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Saque\n\n");
 
 				break;
 			case 7:
-				System.out.println("Depósito\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Depósito\n\n");
 
 				break;
 			case 8:
-				System.out.println("Transferência entre Contas\n\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "Transferência entre Contas\n\n");
 
 				break;
 			default:
-				System.out.println("\nOpção Inválida!\n");
+				System.out.println(Cores.TEXT_GREEN_BOLD + "\nOpção Inválida!\n");
 				break;
 			}
 		}
@@ -82,7 +93,7 @@ public class Menu {
 
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: ");
+		System.out.println("Projeto Desenvolvido por: Estefany Cristina Santana dos Santos");
 		System.out.println("Estefany Cristina Santana dos Santos - estefany_fanysantos@hotmail.com");
 		System.out.println("github.com/fany-santos8/contabancaria");
 		System.out.println("*********************************************************");
