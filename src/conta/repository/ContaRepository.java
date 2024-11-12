@@ -1,9 +1,10 @@
-package controller;
+package conta.repository;
 
 import conta.model.Conta;
 
-public interface ContaController {
-//CRUD da Conta
+public interface ContaRepository {
+
+	// CRUD da Conta
 	public void procurarPorNumero(int numero);
 
 	public void listarTodas();
