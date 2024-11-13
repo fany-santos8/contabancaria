@@ -105,7 +105,7 @@ public class ContaController implements ContaRepository {
 	public Conta buscarNaCollection(int numero) {
 		for (var conta : listaContas) {
 			if (conta.getNumero() == numero) {
-
+				return conta;
 			}
 		}
 		return null;
